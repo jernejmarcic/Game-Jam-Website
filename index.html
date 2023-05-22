@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Jam Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+</head>
+<body>
+<div id="progress-bar-container">
+    <div id="progress-bar"></div>
+</div>
+
+
+<div class="nav-bar">
+    <ul>
+        <li><a href="#" onclick="switchPage('contact')">Contact</a></li>
+        <li><a href="#" onclick="switchPage('rules')">Rules</a></li>
+        <li><a href="#" onclick="switchPage('home')">Home</a></li>
+        <li><a href="#" onclick="switchPage('rewards')">Rewards</a></li>
+        <li><a href="#" onclick="switchPage('submissions')">Submissions</a></li>
+    </ul>
+</div>
+
+
+
+<div class="slider-container">
+    <label for="paragraphWidth">Paragraph Width:</label>
+    <input type="range" min="10" max="1000" value="600" class="slider" id="paragraphWidth">
+</div>
+
+<div class="toggle-switch">
+    <input type="checkbox" id="toggle-dark-mode" onclick="toggleDarkMode()">
+    <label for="toggle-dark-mode"></label>
+</div>
+
+<div id="contact" class="page">
+    <h1 class="animated-text">Cantact me</h1>
+
+    <p class="animated-text"></p>
+</div>
+
+<div id="home" class="page">
+    <h1 class="animated-text">Welcome to Our Game Jam</h1>
+    <p class="animated-text">The theme is JUNGLE</p>
+</div>
+
+<div id="rules" class="page">
+    <h1 class="animated-text">Rules</h1>
+
+    <ul>
+        <li><strong>Theme:</strong> All games must focus on animals and feature challenges that require animals to use their natural traits to solve them (the traits can be exagaretd obviously, as an example you can use a kanguru character to pass a parkour section).</li>
+        <li><strong>Genres:</strong> We welcome all types of games - from text-based adventures and simple 2D platformers, to intricate strategy games, immersive RPGs, or even fully-realized, ray-traced AAA games (like anyone would actually do that).</li>
+        <li><strong>Originality:</strong> All assets (including but not limited to art, sound, and code) used in the game must be your own, or used with permission/under an appropriate license. Plagiarism may not be tolerated, depedning how we feel.</li>
+        <li><strong>Development Window:</strong> Games must be developed entirely within the given time frame of the jam. Early planning, such as creating game concepts and ideas, is allowed, so is submitting old games, it's not like we'll check.</li>
+        <li><strong>Submission:</strong> All games must be submitted by the deadline (June 20 2023). Late submissions will not be accepted.</li>
+        <li><strong>Team Size:</strong> You can work alone or in a team. There are no limitations on team size, but we encourage solo work.</li>
+        <li><strong>Language:</strong> While we welcome all entries, please note that the game interface and all accompanying documentation/submissions should be in English for judging purposes.</li>
+        <li><strong>Rating:</strong> Games don't have to be suitable for all ages. Any content that is deemed to be offensive or overly violent will get extra points.</li>
+    </ul>
+
+
+</div>
+
+<div id="rewards" class="page">,
+    <h1 class="animated-text">Rewards</h1>
+</div>
+
+<div id="submissions" class="page">
+    <h1 class="animated-text">Submissions</h1>
+</div>
+
+<script src="script.js"></script>
+
+
+
+<div id="jungle-container"></div>
+
+</body>
+</html>
