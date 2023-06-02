@@ -1,7 +1,7 @@
 :root {
     --background-color: rgba(255, 255, 255, 1);
     --text-color: rgba(0, 0, 0, 1);
-    --nav-background-color: rgba(51, 51, 51, 1);
+    --nav-background-color: rgba(51, 51, 51, 0.5);
     --nav-text-color: rgba(255, 255, 255, 1);
     --nav-hover-background-color: rgba(221, 221, 221, 1);
     --nav-hover-text-color: rgba(0, 0, 0, 1);
@@ -17,21 +17,24 @@ body {
     /* background-image: url("assets/74-749270_jungle-leaf-png.png"); */
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url("assets/Jungle-Background-PNG.png");
+
 }
+
 h1 {
     color: var(--h1-color);
     text-align: center;
 }
 
 p {
-    margin-left: var(--p-margin);
-    margin-right: var(--p-margin);
+    margin-left: 344px;
+    margin-right: 344px;
     text-align: justify;
 
 }
 ul {
-    margin-left: var(--p-margin);
-    margin-right: var(--p-margin);
+    margin-left: 344px;
+    margin-right: 344px;
     text-align: justify;
 
 }
@@ -41,6 +44,7 @@ ul {
     overflow: hidden;
     display: flex;
     justify-content: center;
+    backdrop-filter: blur(10px);
 }
 
 .nav-bar ul {
@@ -48,6 +52,7 @@ ul {
     margin: 0;
     padding: 0;
     display: flex;
+
 }
 
 .nav-bar li {
@@ -60,6 +65,7 @@ ul {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+
 }
 
 .nav-bar a:hover {
@@ -69,9 +75,6 @@ ul {
 
 .page {
     margin-top: 20px;
-    opacity: 0;
-    transition: opacity 0.
-    5s;
     position: absolute;
     width: 100%;
 }
@@ -131,7 +134,7 @@ ul {
     transform: translateX(26px);
 }
 
-/* The rest of your CSS... */
+
 
 .page {
     margin-top: 20px;
@@ -158,7 +161,7 @@ ul {
     100% { opacity: 1; }
 }
 
-/* Delete this part of your CSS */
+
 .toggle-switch {
     position: relative;
     width: 60px;
@@ -356,4 +359,25 @@ ul {
     height: 100%;
     width: 0;
     background: rgba(0, 255, 0, 0.7);
+}
+
+.jungle-gradient-text {
+    font-size: 2.5em;
+    background: linear-gradient(270deg, #29AB87, #4CBB17);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: Gradient 3s infinite linear;
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }

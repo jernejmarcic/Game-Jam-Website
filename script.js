@@ -20,68 +20,28 @@ function switchPage(pageId) {
 function toggleDarkMode() {
     darkMode = !darkMode;
     if (darkMode) {
-        document.documentElement.style.setProperty('--background-color', 'rgba(17, 17, 27, 1)');
-        document.documentElement.style.setProperty('--text-color', 'rgba(205, 214, 244, 1)');
-        document.documentElement.style.setProperty('--h1-color', 'rgba(243, 139, 168, 1)');
-        document.documentElement.style.setProperty('--nav-background-color', 'rgba(180, 190, 254, 1)');
-        document.documentElement.style.setProperty('--nav-text-color', 'rgba(0, 0, 0, 1)');
-        document.documentElement.style.setProperty('--nav-hover-background-color', 'rgba(0, 0, 0, 1)');
-        document.documentElement.style.setProperty('--nav-hover-text-color', 'rgba(255, 255, 255, 1)');
+        // Dark Mode
+        document.documentElement.style.setProperty('--background-color', 'rgba(26, 36, 33, 1)'); // Dark Jungle Green
+        document.documentElement.style.setProperty('--text-color', 'rgba(161, 202, 180, 1)'); // Light Jungle Green
+        document.documentElement.style.setProperty('--h1-color', 'rgba(161, 202, 180, 1)'); // Light Jungle Green
+        document.documentElement.style.setProperty('--nav-background-color', 'rgba(26, 36, 33, 0.5)'); // Semi-transparent Dark Jungle Green
+        document.documentElement.style.setProperty('--nav-text-color', 'rgba(161, 202, 180, 1)'); // Light Jungle Green
+        document.documentElement.style.setProperty('--nav-hover-background-color', 'rgba(15, 20, 20, 1)'); // Darker Jungle Green
+        document.documentElement.style.setProperty('--nav-hover-text-color', 'rgba(255, 255, 255, 1)'); // White
     } else {
-        document.documentElement.style.setProperty('--background-color', 'rgba(255, 255, 255, 1)');
-        document.documentElement.style.setProperty('--text-color', 'rgba(0, 0, 0, 1)');
-        document.documentElement.style.setProperty('--h1-color', 'rgba(243, 139, 168, 1)');
-        document.documentElement.style.setProperty('--nav-background-color', 'rgba(49, 50, 68, 1)');
-        document.documentElement.style.setProperty('--nav-text-color', 'rgba(205, 214, 244, 1)');
-        document.documentElement.style.setProperty('--nav-hover-background-color', 'rgba(221, 221, 221, 1)');
-        document.documentElement.style.setProperty('--nav-hover-text-color', 'rgba(0, 0, 0, 1)');
+        // Light Mode
+        document.documentElement.style.setProperty('--background-color', 'rgba(161, 202, 180, 1)'); // Light Jungle Green
+        document.documentElement.style.setProperty('--text-color', 'rgba(26, 36, 33, 1)'); // Dark Jungle Green
+        document.documentElement.style.setProperty('--h1-color', 'rgba(26, 36, 33, 1)'); // Dark Jungle Green
+        document.documentElement.style.setProperty('--nav-background-color', 'rgba(161, 202, 180, 0.5)'); // Semi-transparent Light Jungle Green
+        document.documentElement.style.setProperty('--nav-text-color', 'rgba(26, 36, 33, 1)'); // Dark Jungle Green
+        document.documentElement.style.setProperty('--nav-hover-background-color', 'rgba(89, 113, 106, 1)'); // Darker Jungle Green
+        document.documentElement.style.setProperty('--nav-hover-text-color', 'rgba(0, 0, 0, 1)'); // Black
     }
 }
+
 
 switchPage('home');
-
-document.getElementById("paragraphWidth").oninput = function() {
-    document.documentElement.style.setProperty('--p-width', this.value + 'px');
-    document.documentElement.style.setProperty('--p-margin', (window.innerWidth - this.value) / 2 + 'px');
-}
-
-var leafLimit = 100;
-var leafCount = 0;
-var initialInterval = 500;
-var maxInterval = 5000;
-var interval = initialInterval;
-
-function addLeaf() {
-    if (leafCount < leafLimit) {
-        var newLeaf = document.createElement('div');
-        newLeaf.classList.add('leaf');
-
-        // Apply random size and color to each leaf
-        if (Math.random() > 0.5) newLeaf.classList.add('big');
-        if (Math.random() > 0.5) newLeaf.classList.add('green');
-        else newLeaf.classList.add('yellow');
-
-        // Append to container to calculate offset width
-        var container = document.getElementById('jungle-container');
-        container.appendChild(newLeaf);
-
-        // Randomly position the leaf on the sides of the screen
-        var side = Math.random() > 0.5 ? 0 : window.innerWidth;
-        newLeaf.style.left = side - newLeaf.offsetWidth + 'px';
-        newLeaf.style.top = Math.random() * window.innerHeight + 'px';
-
-        leafCount++;
-
-        // Gradually increase interval, capped at maxInterval
-        if (interval < maxInterval) {
-            interval *= 1.05;
-        }
-
-        setTimeout(addLeaf, interval);
-    }
-}
-
-setTimeout(addLeaf, interval);
 
 
 window.onscroll = function() {
