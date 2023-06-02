@@ -20,25 +20,24 @@ function switchPage(pageId) {
 function toggleDarkMode() {
     darkMode = !darkMode;
     if (darkMode) {
-        // Dark Mode
-        document.documentElement.style.setProperty('--background-color', 'rgba(26, 36, 33, 1)'); // Dark Jungle Green
-        document.documentElement.style.setProperty('--text-color', 'rgba(161, 202, 180, 1)'); // Light Jungle Green
-        document.documentElement.style.setProperty('--h1-color', 'rgba(161, 202, 180, 1)'); // Light Jungle Green
-        document.documentElement.style.setProperty('--nav-background-color', 'rgba(26, 36, 33, 0.5)'); // Semi-transparent Dark Jungle Green
-        document.documentElement.style.setProperty('--nav-text-color', 'rgba(161, 202, 180, 1)'); // Light Jungle Green
-        document.documentElement.style.setProperty('--nav-hover-background-color', 'rgba(15, 20, 20, 1)'); // Darker Jungle Green
-        document.documentElement.style.setProperty('--nav-hover-text-color', 'rgba(255, 255, 255, 1)'); // White
+        document.documentElement.style.setProperty('--background-color', 'rgba(32, 41, 22, 1)'); // Dark Jungle Green
+        document.documentElement.style.setProperty('--text-color', 'rgba(232, 240, 194, 1)'); // Jungle Mist
+        document.documentElement.style.setProperty('--h1-color', 'rgba(140, 165, 50, 1)'); // Jungle Green
+        document.documentElement.style.setProperty('--nav-background-color', 'rgba(32, 41, 22, 0.8)'); // Dark Jungle Green with some transparency
+        document.documentElement.style.setProperty('--nav-text-color', 'rgba(181, 211, 87, 1)'); // Light Jungle Green
+        document.documentElement.style.setProperty('--nav-hover-background-color', 'rgba(140, 165, 50, 1)'); // Jungle Green
+        document.documentElement.style.setProperty('--nav-hover-text-color', 'rgba(232, 240, 194, 1)'); // Jungle Mist
     } else {
-        // Light Mode
-        document.documentElement.style.setProperty('--background-color', 'rgba(161, 202, 180, 1)'); // Light Jungle Green
-        document.documentElement.style.setProperty('--text-color', 'rgba(26, 36, 33, 1)'); // Dark Jungle Green
-        document.documentElement.style.setProperty('--h1-color', 'rgba(26, 36, 33, 1)'); // Dark Jungle Green
-        document.documentElement.style.setProperty('--nav-background-color', 'rgba(161, 202, 180, 0.5)'); // Semi-transparent Light Jungle Green
-        document.documentElement.style.setProperty('--nav-text-color', 'rgba(26, 36, 33, 1)'); // Dark Jungle Green
-        document.documentElement.style.setProperty('--nav-hover-background-color', 'rgba(89, 113, 106, 1)'); // Darker Jungle Green
-        document.documentElement.style.setProperty('--nav-hover-text-color', 'rgba(0, 0, 0, 1)'); // Black
+        document.documentElement.style.setProperty('--background-color', 'rgba(232, 240, 194, 1)'); // Jungle Mist
+        document.documentElement.style.setProperty('--text-color', 'rgba(50, 77, 24, 1)'); // Deep Jungle Green
+        document.documentElement.style.setProperty('--h1-color', 'rgba(140, 165, 50, 1)'); // Jungle Green
+        document.documentElement.style.setProperty('--nav-background-color', 'rgba(181, 211, 87, 0.5)'); // Light Jungle Green with some transparency
+        document.documentElement.style.setProperty('--nav-text-color', 'rgba(50, 77, 24, 1)'); // Deep Jungle Green
+        document.documentElement.style.setProperty('--nav-hover-background-color', 'rgba(140, 165, 50, 1)'); // Jungle Green
+        document.documentElement.style.setProperty('--nav-hover-text-color', 'rgba(232, 240, 194, 1)'); // Jungle Mist
     }
 }
+
 
 
 switchPage('home');
@@ -50,3 +49,4 @@ window.onscroll = function() {
     var percent = scrollTop / bodyHeight * 100;
     document.getElementById('progress-bar').style.width = percent + '%';
 }
+
