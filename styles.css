@@ -403,3 +403,51 @@ ul {
 #copyButton:hover .hover-text {
     display: block;
 }
+
+#countdown {
+    font-family: 'Montserrat', cursive; /* Use a font that best represents your theme */
+    color: rgba(140, 165, 50, 1); /* Jungle green for the color */
+    background-image: url('assets/tree_trunk.png'); /* An image of a wood texture */
+    background-size: cover;
+    text-shadow: 2px 2px rgba(50, 77, 24, 1); /* Give a shadow effect to the text to create depth */
+    font-size: 40px;
+}
+
+/* This is for the phone additected Gen Z (i am a phone addicted gen z) */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 16px; /* Adjust base font size for mobile */
+    }
+
+    p, ul {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .nav-bar {
+        flex-direction: column; /* Make the navbar vertical */
+    }
+
+    .nav-bar ul {
+        flex-direction: column; /* Make the navbar list vertical */
+        align-items: center; /* Center the items */
+    }
+
+    .nav-bar li {
+        margin: 10px 0; /* Adjust margins for each navbar item */
+    }
+
+    .nav-bar a {
+        padding: 10px; /* Adjust padding for each navbar link */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust h1 size */
+    }
+
+    #countdown {
+        font-size: 24px; /* Adjust countdown size */
+    }
+}
+
+
