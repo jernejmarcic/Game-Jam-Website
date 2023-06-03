@@ -19,6 +19,7 @@ body {
     background-size: cover;
     background-image: url("assets/Jungle-Background-PNG.png");
     background-position: center;
+
 }
 
 h1 {
@@ -74,79 +75,19 @@ ul {
 }
 
 .page {
-    margin-top: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
     position: absolute;
     width: 100%;
 }
 
 .page.show {
+    visibility: visible;
     opacity: 1;
+    transition: visibility 0s 0s, opacity 0.5s linear;
 }
 
-.animated-text {
-    animation: fadeIn 2s;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.toggle-switch {
-    position: relative;
-    width: 60px;
-    height: 34px;
-}
-
-.toggle-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.toggle-switch label {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 1);
-    transition: .4s;
-}
-
-.toggle-switch label:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: rgba(255, 255, 255, 1);
-    transition: .4s;
-}
-
-.toggle-switch input:checked + label {
-    background-color: rgba(0, 255, 0, 1);
-}
-
-.toggle-switch input:checked + label:before {
-    transform: translateX(26px);
-}
-
-
-
-.page {
-    margin-top: 20px;
-    opacity: 0;
-    transition: opacity 0.5s;
-    position: absolute;
-    width: 100%;
-}
-
-.page.show {
-    opacity: 1;
-}
 
 .page.hide {
     opacity: 0;
@@ -161,50 +102,6 @@ ul {
     100% { opacity: 1; }
 }
 
-
-.toggle-switch {
-    position: relative;
-    width: 60px;
-    height: 34px;
-}
-
-.toggle-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.toggle-switch label {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 1);
-    transition: .4s;
-}
-
-.toggle-switch label:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: rgba(255, 255, 255, 1);
-    transition: .4s;
-}
-
-.toggle-switch input:checked + label {
-    background-color: rgba(0, 255, 0, 1);
-}
-
-.toggle-switch input:checked + label:before {
-    transform: translateX(26px);
-}
-
-/* Add this part to your CSS */
 .toggle-switch {
     position: relative;
     width: 60px;
@@ -249,7 +146,6 @@ ul {
     transform: translateX(32px);
 }
 
-/* Add this part to your CSS */
 .toggle-switch label:after {
     position: absolute;
     content: "☀️";
@@ -315,7 +211,7 @@ ul {
 .menu-hidden {
     display: none;
 }
-
+/* Leaf code is unsed for now */
 .leaf {
     position: absolute;
     background: url('assets/kindpng_1316953.png');
@@ -382,27 +278,6 @@ ul {
     }
 }
 
-#copyButton {
-    position: relative;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.hover-text {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 5px;
-    background-color: #000;
-    color: #fff;
-    font-size: 12px;
-}
-
-#copyButton:hover .hover-text {
-    display: block;
-}
 
 #countdown {
     font-family: 'Montserrat', cursive; /* Use a font that best represents your theme */
@@ -410,6 +285,31 @@ ul {
     background-size: cover;
     text-shadow: 2px 2px rgba(50, 77, 24, 1); /* Give a shadow effect to the text to create depth */
     font-size: 40px;
+}
+
+.contact-github {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    z-index: 10;
+}
+
+.contact-github:hover {background-color: #3e8e41}
+
+.contact-github:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    z-index: 10;
 }
 
 /* This is for the phone additected Gen Z (i am a phone addicted gen z) */

@@ -3,19 +3,15 @@ let darkMode = false;
 function switchPage(pageId) {
     const pages = document.getElementsByClassName('page');
     for (let page of pages) {
-        if(page.classList.contains('show')){
+        if (page.classList.contains('show')) {
             page.classList.remove('show');
-            page.classList.add('hide');
         }
     }
-    setTimeout(function(){
-        for (let page of pages) {
-            page.classList.remove('show');
-            page.classList.remove('hide');
-        }
+    setTimeout(function() {
         document.getElementById(pageId).classList.add('show');
     }, 500);
 }
+
 
 function toggleDarkMode() {
     darkMode = !darkMode;
@@ -75,3 +71,7 @@ function startCountdown() {
 }
 
 startCountdown();
+
+
+
+
