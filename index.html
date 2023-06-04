@@ -39,23 +39,27 @@
 <div id="contact" class="page">
     <h1 class="animated-text">Contact us</h1>
     <div style="text-align: center">
-    <form
-            action="https://formspree.io/f/mnqykdol"
-            method="POST"
-    >
-        <label>
-            Your name: <br>
-            <input type="text" name="name">
-        </label> <br>
-        <label>
-            Your message: <br>
-            <textarea name="message" cols="20"></textarea>
-        </label> <br>
-        <!-- your other form fields go here -->
-        <button type="submit" class="submit-button">Send</button>
+        <form action="https://formspree.io/f/mnqykdol"
+              method="POST"
+              class="styled-form">
+            <label>
+                Your name: <br>
+                <input type="text"
+                       name="name"
+                       class="form-input">
+            </label> <br>
+            <label>
+                Your message: <br>
+                <textarea name="message"
+                          cols="20"
+                          class="form-input"></textarea>
+            </label> <br>
+            <!-- your other form fields go here -->
+            <button type="submit"
+                    class="submit-button">Send</button>
+        </form>
 
-    </form>
-        </div>
+    </div>
     <div style="text-align: center;">You can contact us on the following platforms: <br>
         <br>
         <center>
@@ -123,9 +127,21 @@
 
 </div>
 
-<div id="rewards" class="page">,
+<div id="rewards" class="page">
     <h1 class="animated-text">Rewards</h1>
+    <div class="reward-container">
+        <div class="reward">
+            <h2>First Place</h2>
+            <div class="sketchfab-embed-wrapper"> <iframe title="Arduino NANO" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/a1f51d99f74a4311af5db9f4b7ebdd3c/embed?ui_theme=dark"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/arduino-nano-a1f51d99f74a4311af5db9f4b7ebdd3c?utm_medium=embed&utm_campaign=share-popup&utm_content=a1f51d99f74a4311af5db9f4b7ebdd3c" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Arduino NANO </a> by <a href="https://sketchfab.com/Fa_Sketch?utm_medium=embed&utm_campaign=share-popup&utm_content=a1f51d99f74a4311af5db9f4b7ebdd3c" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> F2A </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=a1f51d99f74a4311af5db9f4b7ebdd3c" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+        </div>
+            <div class="reward">
+            <h2>Second Place</h2>
+            <div class="sketchfab-embed-wrapper"> <iframe title="Clickable Pen" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/3af52566eb2a4d97b015c21f45384e58/embed?ui_theme=dark"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/clickable-pen-3af52566eb2a4d97b015c21f45384e58?utm_medium=embed&utm_campaign=share-popup&utm_content=3af52566eb2a4d97b015c21f45384e58" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Clickable Pen </a> by <a href="https://sketchfab.com/rhettmccarty?utm_medium=embed&utm_campaign=share-popup&utm_content=3af52566eb2a4d97b015c21f45384e58" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> rhettmccarty </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=3af52566eb2a4d97b015c21f45384e58" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+        </div>
+    </div>
 </div>
+
+
 
 <div id="submissions" class="page">
     <h1 class="animated-text">Submissions</h1>
@@ -135,26 +151,19 @@
         <form
                 action="https://formspree.io/f/meqwbglo"
                 method="POST"
-        >@media screen and (max-width: 600px) {
-
-    @keyframes scroll {
-        0% {
-            bottom: -245%;
-        }
-        100% {
-            bottom: 100%;
-        }
-    }
-
-}
-
-            <label>
+                class="styled-form">
+      <label>
                 Your name: <br>
-                <input type="text" name="name">
+                <input type="text"
+                       name="name"
+                       placeholder="can be anything"
+                       class="form-input">
             </label> <br>
             <label>
                 Your message (link): <br>
-                <textarea name="message" cols="20"></textarea>
+                <textarea name="message" cols="20"
+                          placeholder="Enter the link to your game (github, WeTranfer, etc."
+                          class="form-input"></textarea>
             </label> <br>
             <!-- your other form fields go here -->
             <button type="submit" class="submit-button">Send</button>
