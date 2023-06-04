@@ -85,5 +85,35 @@ function resetTimer() {
 }
 
 function redirectToAnotherPage() {
-    window.location.href = 'credits.html';  // replace 'another-page.html' with your file's path
+    window.location.href = 'credits.html';
+}
+
+document.querySelectorAll('.contact-button').forEach(button => {
+    button.addEventListener('click', async () => {
+        let textToCopy = button.getAttribute('data-text');
+
+        try {
+            await navigator.clipboard.writeText(textToCopy);
+            displayCopyNotification('Copied to clipboard!');
+        } catch (err) {
+            console.error('Failed to copy text: ', err);
+        }
+    });
+});
+
+function displayCopyNotification(message) {
+    let notification = document.createElement('div');
+    notification.innerText = message;
+    notification.style.position = 'fixed';
+    notification.style.bottom = '20px';
+    notification.style.right = '20px';
+    notification.style.backgroundColor = '#000';
+    notification.style.color = '#fff';
+    notification.style.padding = '10px';
+    notification.style.borderRadius = '5px';
+    document.body.appendChild(notification);
+
+    setTimeout(() => {
+        notification.remove();
+    }, 2000);
 }

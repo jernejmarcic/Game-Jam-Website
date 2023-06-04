@@ -288,28 +288,51 @@ ul {
     font-size: 40px;
 }
 
-.github-contact {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+.contact-buttons-container {
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
 }
 
-.github-contact:hover {background-color: #3e8e41}
-
-.github-contact:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+.contact-button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;  /* Added for a circular shape */
+    border-radius: 50%;  /* Makes the buttons circular */
+    border: 2px solid #ffffff;  /* Adds a white border */
+    transition: width 0.5s;
+    background-color: transparent;
 }
+
+.contact-button:hover {
+    width: 200px;
+}
+
+.contact-button img {
+    height: 20px;
+    width: 20px;
+}
+
+.contact-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 0;
+    transition: max-width 0.5s;
+    opacity: 0;
+}
+
+.contact-button:hover .contact-text {
+    max-width: 120px;
+    opacity: 1;
+}
+
+
+
+
 
 
 /* This is for the phone additected Gen Z (i am a phone addicted gen z) */
