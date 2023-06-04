@@ -80,6 +80,7 @@ ul {
     transition: visibility 0s 0.5s, opacity 0.5s linear;
     position: absolute;
     width: 100%;
+    z-index: 1;
 }
 
 .page.show {
@@ -170,7 +171,7 @@ ul {
     position: relative;
     width: 60px;
     height: 28px;
-    margin: auto; /* This will center your switch */
+    margin: auto;
 }
 
 #menuContainer {
@@ -287,7 +288,7 @@ ul {
     font-size: 40px;
 }
 
-.contact-github {
+.github-contact {
     display: inline-block;
     padding: 15px 25px;
     font-size: 24px;
@@ -300,23 +301,22 @@ ul {
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
-    z-index: 10;
 }
 
-.contact-github:hover {background-color: #3e8e41}
+.github-contact:hover {background-color: #3e8e41}
 
-.contact-github:active {
+.github-contact:active {
     background-color: #3e8e41;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-    z-index: 10;
 }
+
 
 /* This is for the phone additected Gen Z (i am a phone addicted gen z) */
 @media screen and (max-width: 600px) {
     body {
         font-size: 16px; /* Adjust base font size for mobile */
-        background-image: url("assets/Jungle-Background-PNG.png");
+        background-image: url("assets/jungle-rainforers-mobile.png");
 
     }
 

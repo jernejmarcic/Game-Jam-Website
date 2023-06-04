@@ -22,6 +22,7 @@
         <li><a href="#" onclick="switchPage('home')">Home</a></li>
         <li><a href="#" onclick="switchPage('rewards')">Rewards</a></li>
         <li><a href="#" onclick="switchPage('submissions')">Submissions</a></li>
+        <li><a href="credits.html">Credits</a></li>
     </ul>
 </div>
 
@@ -35,10 +36,16 @@
 
 <div id="contact" class="page">
     <h1 class="animated-text">Contact us</h1>
-    <div style="text-align: center;">You can contact us on the following platforms</div>
-        <button class="contact-github">TEST</button>
+    <div style="text-align: center;">You can contact us on the following platforms: <br>
+        <br>
+        <button class="github-contact">Click Me</button>
+    </div>
+
+
 
 </div>
+
+
 
 <div id="home" class="page">
     <h1 class="animated-text">Welcome to Our Game Jam</h1>
@@ -89,6 +96,23 @@
     <h1 class="animated-text">Submissions</h1>
     <div style="text-align: justify"><p>The game can either be sent to our email in any form that can easely playable.
     If we cannot get the game to work your game will automatically not be disqualified.</p></div>
+    <div style="text-align: center">
+        <form
+                action="https://formspree.io/f/meqwbglo"
+                method="POST"
+        >
+            <label>
+                Your name: <br>
+                <input type="text" name="name">
+            </label> <br>
+            <label>
+                Your message (link): <br>
+                <textarea name="message" cols="20"></textarea>
+            </label> <br>
+            <!-- your other form fields go here -->
+            <button type="submit" class="submit-button">Send</button>
+        </form>
+    </div>
 </div>
 
 <div id="jungle-container"></div>

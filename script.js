@@ -74,4 +74,16 @@ startCountdown();
 
 
 
+let timer;
 
+document.onmousemove = resetTimer;
+document.onkeypress = resetTimer;
+
+function resetTimer() {
+    clearTimeout(timer);
+    timer = setTimeout(redirectToAnotherPage, 30000);  // 30 seconds of inactivity
+}
+
+function redirectToAnotherPage() {
+    window.location.href = 'credits.html';  // replace 'another-page.html' with your file's path
+}

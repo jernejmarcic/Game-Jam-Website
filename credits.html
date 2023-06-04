@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credits</title>
+    <style>
+        body {
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .title {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            color: white;
+            text-align: center;
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        .credits {
+            position: absolute;
+            bottom: -10;
+            width: 100%;
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            animation: scroll 60s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                bottom: -245%;
+            }
+            100% {
+                bottom: 100%;
+            }
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-3px, 3px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(3px, 1px); }
+            80% { transform: translate(-1px, -1px); }
+            100% { transform: translate(1px, 2px); }
+        }
+
+        .glitch {
+            position: relative;
+            color: red;
+            font-size: 2em;
+            text-transform: uppercase;
+            animation: glitch 200ms infinite;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 #00f;
+            color: red;
+            animation: glitch 150ms infinite;
+        }
+
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 #0f0;
+            animation: glitch 100ms infinite;
+    </style>
+</head>
+<body>
+
+
+<script>
+    var glitch = document.getElementById("glitch");
+    setInterval(function() {
+        glitch.innerHTML = glitch.textContent.split('').map(function(c) {
+            var fluctuation = Math.floor(Math.random() * 2) * (Math.random() > .5 ? 1 : -1);
+            return '<span style="position:relative;top:' + fluctuation + 'px;">' + c + '</span>';
+        }).join('');
+    }, 200);
+</script>
+
+<div class="credits">
+    <h1>Credits</h1>
+    <h3>Team members: Jernej, Jakob, Nicolas, Glib</h3>
+    <p>Project Idea and Conceptualization: Jernej</p>
+    <p>Competition Theme: Nicolas</p>
+    <p>Lead Website Designer: Jernej</p>
+    <p>Assistant Website Designer: Jernej</p>
+    <p>Front-End Developer: Jernej</p>
+    <p>Back-End Developer: Jernej</p>
+    <p>Website Colors and Aesthetic Designer: Jernej</p>
+    <p>Website Coding and Scripting: Jernej and GPT4</p>
+    <p>Machine Learning Consultant: GPT4</p>
+    <p>UI/UX Designer: Jernej</p>
+    <p>Security and Privacy Consultant: Jernej</p>
+    <p>QA and Testing: Jernej</p>
+    <p>iOS and mac QA and Testing: Spitfire</p>
+    <p>Content Writer and Editor: Jernej + Jakob</p>
+    <p>Poster and Graphic Designer: Jernej</p>
+    <p>Social Media Manager: Jernej</p>
+    <p>Customer Support: Jernej</p>
+    <p>Product Manager: Jernej</p>
+    <p>System Administrator: Jernej</p>
+    <p>IT Coordinator: Jernej</p>
+    <p>Software Architect: Jernej</p>
+    <p>Technical Writer: Jernej</p>
+    <p>Information Architect: Jernej</p>
+    <p>Usability Expert: Jernej</p>
+    <p>Web Analytics Developer: Jernej</p>
+    <div id="glitch" class="glitch" data-text="Pain and suffering: Jernej">Pain and suffering: Jernej</div>
+
+
+</div>
+
+</body>
+</html>
