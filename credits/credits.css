@@ -77,7 +77,7 @@ body {
 
     @keyframes scroll {
         0% {
-            bottom: -350%;
+            bottom: -370%;
         }
         100% {
             bottom: 100%;
